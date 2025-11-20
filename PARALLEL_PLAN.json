@@ -1,0 +1,60 @@
+{
+  "base": "main",
+  "project": "AI Framework - Universal Model System",
+  "description": "Scaffold the AI framework that creates specialized Ollama models",
+  "tasks": [
+    {
+      "branch": "core-framework",
+      "files": [
+        "framework/__init__.py",
+        "framework/core/__init__.py",
+        "framework/core/base_model.py",
+        "framework/core/config.py",
+        "framework/core/model_manager.py",
+        "framework/core/exceptions.py"
+      ],
+      "description": "Core framework structure with base classes, configuration system, and model management",
+      "spec": "Create the foundation: BaseModel abstract class for all models, Config class for model parameters, ModelManager for lifecycle management, custom exceptions"
+    },
+    {
+      "branch": "training-pipeline",
+      "files": [
+        "framework/training/__init__.py",
+        "framework/training/fine_tuner.py",
+        "framework/training/prompt_engineer.py",
+        "framework/training/model_builder.py",
+        "framework/training/dataset_loader.py"
+      ],
+      "description": "Training pipeline for creating and fine-tuning models",
+      "spec": "Build training infrastructure: FineTuner for model adaptation, PromptEngineer for system prompts, ModelBuilder for Ollama modelfile generation, DatasetLoader for training data"
+    },
+    {
+      "branch": "runtime-deployment",
+      "files": [
+        "framework/runtime/__init__.py",
+        "framework/runtime/ollama_interface.py",
+        "framework/runtime/inference_engine.py",
+        "framework/runtime/model_server.py",
+        "framework/runtime/cache_manager.py"
+      ],
+      "description": "Runtime and deployment system for serving models",
+      "spec": "Create runtime: OllamaInterface for model operations, InferenceEngine for predictions, ModelServer for API, CacheManager for response caching"
+    },
+    {
+      "branch": "docs-and-tests",
+      "files": [
+        "README.md",
+        "setup.py",
+        "requirements.txt",
+        "tests/__init__.py",
+        "tests/test_core.py",
+        "tests/test_training.py",
+        "tests/test_runtime.py",
+        "docs/usage.md",
+        "examples/create_model.py"
+      ],
+      "description": "Documentation, testing framework, and examples",
+      "spec": "Complete package: README with architecture, setup.py for installation, comprehensive tests for all modules, usage documentation, example scripts"
+    }
+  ]
+}
