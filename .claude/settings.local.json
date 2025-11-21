@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/tmp/mirador-action:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
