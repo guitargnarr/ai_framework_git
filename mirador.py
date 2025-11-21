@@ -18,8 +18,42 @@ class MiradorOrchestrator:
     def __init__(self):
         self.ollama_url = "http://localhost:11434"
         self.output_dir = Path.home() / "ai_framework_git" / "outputs"
+        self.context_dir = Path.home() / "ai_framework_git" / "context"
         self.timeout = 120
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.user_context = self.load_context()
+
+    def load_context(self):
+        """Load user context from JSON (graceful fallback)"""
+        context_file = self.context_dir / "user_profile.json"
+        try:
+            if context_file.exists():
+                with open(context_file, 'r') as f:
+                    return json.load(f)
+        except Exception as e:
+            print(f"⚠️ Context load failed: {e}")
+        return {}  # Empty dict if missing/broken
+
+    def format_context_string(self):
+        """Format context for injection into prompts"""
+        if not self.user_context:
+            return ""
+
+        ctx = self.user_context
+        parts = ["\n--- USER CONTEXT ---"]
+
+        if 'location' in ctx:
+            parts.append(f"Location: {ctx['location'].get('city')}, {ctx['location'].get('state')}")
+
+        if 'professional' in ctx:
+            parts.append(f"Role: {ctx['professional'].get('role')}")
+            parts.append(f"Focus: {ctx['professional'].get('work_mode')}")
+
+        if 'goals' in ctx and 'short_term' in ctx['goals']:
+            parts.append(f"Goals: {', '.join(ctx['goals']['short_term'])}")
+
+        parts.append("--- END CONTEXT ---\n")
+        return '\n'.join(parts)
 
     def list_models(self):
         """List all available Ollama models"""
@@ -35,8 +69,13 @@ class MiradorOrchestrator:
             print(f"Error connecting to Ollama: {e}")
             return False
 
-    def query_model(self, model_name, prompt, context="", max_retries=3):
+    def query_model(self, model_name, prompt, context="", max_retries=3, inject_user_context=True):
         """Query a single model with retry logic and validation"""
+        # Inject user context if enabled
+        if inject_user_context:
+            user_ctx = self.format_context_string()
+            prompt = f"{user_ctx}\n{prompt}" if user_ctx else prompt
+
         full_prompt = f"{context}\n\n{prompt}" if context else prompt
 
         for attempt in range(max_retries):

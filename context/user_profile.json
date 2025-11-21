@@ -1,0 +1,33 @@
+{
+  "location": {
+    "city": "Louisville",
+    "state": "KY",
+    "county": "Jefferson"
+  },
+  "financial": {
+    "income_model": "consulting_variable",
+    "revenue_sources": ["platforms", "consulting", "services"],
+    "focus_areas": ["reduce_expenses", "increase_passive_income", "optimize_cashflow"],
+    "debt_priorities": ["mortgage_optimization"],
+    "investment_horizon": "long_term"
+  },
+  "professional": {
+    "role": "AI-native developer",
+    "core_skills": ["Python", "React", "TypeScript", "AI orchestration", "parallel development"],
+    "platforms": [
+      "guitar.projectlavos.com",
+      "ai_framework_git",
+      "pattern_learning_system"
+    ],
+    "methodologies": ["parallel_dev_v5", "pattern_learning", "iterative_vetting"],
+    "focus": "value_creation",
+    "work_mode": "apply_fix_scale_deploy_sell_automate"
+  },
+  "goals": {
+    "short_term": ["vet_24_github_repos", "deploy_platforms", "generate_revenue"],
+    "medium_term": ["consulting_clients", "platform_adoption", "methodology_teaching"],
+    "long_term": ["sustainable_income", "AI_native_development_mastery"]
+  },
+  "context_version": "1.0",
+  "last_updated": "2025-11-21"
+}
