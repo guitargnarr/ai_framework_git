@@ -1,0 +1,18 @@
+=== Mirador Model Health Check ===
+Timestamp: Fri Nov 21 08:25:24 EST 2025
+
+✓ Ollama service running
+--- Specialist Models ---
+✓ opportunity_identification_specialist - WORKING (3s latency)
+✓ instruction_generation_specialist - WORKING (1s latency)
+✓ fact_validation_specialist - WORKING (1s latency)
+--- Common Models ---
+✗ financial_planning_expert_v5 - NOT INSTALLED
+✗ enhanced_agent_fast_v3 - NOT INSTALLED
+✗ louisville_expert_v2 - NOT INSTALLED
+--- Summary ---
+Specialist Models: 3/3 working
+Common Models: 0/3 working
+Overall: 3/6 models healthy
+
+System Status: PARTIAL FAILURE ⚠
