@@ -175,9 +175,52 @@ ollama create new_agent -f new_agent.modelfile
 
 ---
 
+## The Merry Go Round Protocol
+
+**Definition**: Continuous cycle of context injection → blank slate chains → result refinement
+
+**The Cycle**:
+```
+1. Edit context/user_profile.json (update goals, skills, priorities)
+   ↓
+2. Run blank slate chain (models see fresh context)
+   ↓
+3. Execute generated actions (real-world results)
+   ↓
+4. Refine context based on outcomes
+   ↓
+LOOP: Return to step 1 (context evolves, models stay timeless)
+```
+
+**Commands**:
+```bash
+# Update context
+nano context/user_profile.json
+
+# Run with context injection
+python3 mirador.py ask financial_calculator "Your question"
+# Context auto-injected from user_profile.json
+
+# Run without context (pure blank slate)
+python3 -c "
+from mirador import MiradorOrchestrator
+m = MiradorOrchestrator()
+result = m.query_model('financial_calculator', 'Question', inject_user_context=False)
+print(result)
+"
+
+# Generate daily action (uses context)
+python3 mirador_actionable.py generate
+```
+
+**Why this works**: Models = timeless specialists. Context = current reality. Updates happen in JSON, not modelfiles.
+
+---
+
 ## Critical Notes
 
-- **No corporate context** (Humana references removed)
+- **Tabula Rasa architecture**: Models are blank slates, context injected at runtime
+- **No baked-in personal data**: Update `context/user_profile.json`, not modelfiles
 - **Focus**: Value creation (apply/fix/scale/deploy/sell/automate)
 - **mirador-core 2.1.2**: Pre-built utilities (error handling, validation)
 - **Ollama required**: All models run locally
@@ -188,6 +231,6 @@ ollama create new_agent -f new_agent.modelfile
 ## Legacy References
 
 **Old repo**: https://github.com/guitargnarr/mirador (DEPRECATED, Grade F)
-**This repo**: Clean phoenix, value-focused, production-ready
+**This repo**: Clean phoenix, Tabula Rasa architecture, production-ready
 
 **Philosophy**: @~/.claude/context/working-philosophy.md
