@@ -1,68 +1,193 @@
-# AI Framework Project Context
+# Mirador AI Orchestration - Phoenix Edition
 
-**Last Updated**: November 20, 2025
-**Session Type**: Parallel Development Execution
+**Updated**: November 21, 2025
+**Focus**: Value creation via apply/fix/scale/deploy/sell/automate
 
-## Project Overview
-Universal AI Model System - Creates specialized Ollama models for different domains
+---
 
-## Current State (Nov 20)
-- ✅ Git repository initialized
-- ✅ 4 parallel worktrees created (no conflicts)
-- ✅ Task specifications written
-- ✅ Ready for parallel execution
+## Quick Start
 
-## Worktree Structure
-```
-~/ai_framework_worktrees/
-├── core-framework/       # Base classes, config, model manager
-├── training-pipeline/    # Fine-tuning, prompt engineering, model builder
-├── runtime-deployment/   # Ollama interface, inference, API server
-└── docs-and-tests/      # README, tests, examples
+### Daily Action Generation
+```bash
+python3 mirador_actionable.py generate
+cat daily_actions/daily_action_$(date +%Y-%m-%d).md
 ```
 
-## Execution Options
-1. **Parallel (4 terminals)**: Open 4 Claude instances, paste task specs
-2. **Sequential (this session)**: Build each worktree one by one
-3. **Skeleton Crew**: Just essentials (30 min MVP)
+### Model Health Check
+```bash
+./scripts/model_health_check.sh
+```
 
-## Task Files
-- TASK_1_CORE_FRAMEWORK.md
-- TASK_2_TRAINING_PIPELINE.md
-- TASK_3_RUNTIME_DEPLOYMENT.md
-- TASK_4_DOCS_AND_TESTS.md
+### Chain Execution
+```bash
+python3 mirador.py chain "Your prompt" opportunity_identification_specialist instruction_generation_specialist
+```
 
-## Universal Models to Support
-1. universal_music_mentor
-2. universal_creative_catalyst
-3. universal_career_strategist
-4. universal_financial_advisor
-5. universal_corporate_navigator
-6. universal_relationship_harmony
-7. universal_health_wellness
-8. universal_louisville_expert
+---
 
-## Key Decisions
-- Use dataclasses for configuration
-- Type hints throughout
-- Ollama modelfile format compatibility
-- SQLite for chain_memory.db
-- FastAPI for model server
+## Installation
+
+### Dependencies
+```bash
+# Install mirador-core utilities
+pip install lib/mirador_core-2.1.2-py3-none-any.whl
+
+# Verify
+python3 -c "from mirador_core.error_handling import ChainExecutor; print('✅ mirador-core ready')"
+
+# Install other dependencies
+pip install rich pandas pyyaml requests
+```
+
+### Specialist Models (3 core)
+```bash
+ollama list | grep specialist
+# Expected:
+# - opportunity_identification_specialist
+# - instruction_generation_specialist
+# - fact_validation_specialist
+```
+
+---
+
+## Architecture
+
+**Core Engine**: mirador-core 2.1.2 (Python utilities)
+- ChainExecutor: Retry logic, error handling
+- CircuitBreaker: Failure protection
+- ConstraintValidator: Output validation
+- ContextManager: State management
+
+**Orchestration**: mirador.py (enhanced shell wrapper)
+- 3-attempt retry with backoff
+- Response validation (>50 chars)
+- Graceful degradation (works with partial model availability)
+
+**Systems**:
+1. Daily actions (`mirador_actionable.py`)
+2. Opportunity scoring (`mirador_action_prioritizer.py`)
+3. Fact validation (`mirador_fact_validator.py`)
+4. Health monitoring (`scripts/model_health_check.sh`)
+
+---
+
+## Agent Library (80 modelfiles)
+
+### Value Creation (Phoenix-Capable) ✅
+- opportunity_analyst.modelfile
+- sales_content_creator.modelfile
+- digital_asset_curator.modelfile
+- financial_planning_expert_v*.modelfile
+- content_strategist_pro.modelfile
+- creative_entrepreneur.modelfile
+- side_income_opportunity_scout.modelfile
+
+### Technical ✅
+- code_reviewer.modelfile
+- ux_designer.modelfile
+- solution_architect.modelfile
+- master_coder.modelfile
+
+### Music/Creative ✅
+- guitar_expert.modelfile
+- master_guitar_instructor.modelfile
+- touring_readiness_coach.modelfile
+- audio_production_strategist.modelfile
+- performance_anxiety_coach.modelfile
+
+### Personal Context (Archive)
+- matthew_context_provider_*.modelfile (personal history)
+- matthew_advisor_*.modelfile (career specific)
+- matthew_parenting_*.modelfile (family context)
+- father_daughter_*.modelfile (parenting)
+
+**Total**: 80 modelfiles (cleaned from 189 in legacy repo)
+
+---
 
 ## Commands
+
+### Core
 ```bash
-# Check status
-git worktree list
+# Generate daily action
+python3 mirador_actionable.py generate
 
-# After completion, merge all
-git merge core-framework
-git merge training-pipeline
-git merge runtime-deployment
-git merge docs-and-tests
+# Check model health
+./scripts/model_health_check.sh
 
-# Clean up
-git worktree prune
+# Run chain
+python3 mirador.py chain "prompt" model1 model2
+
+# Score opportunity
+python3 mirador_action_prioritizer.py add --title "Task" --financial-impact 8 --time-efficiency 7
 ```
 
-## Philosophy
-This is the meta-system - it creates the creators. Each universal model can spawn unlimited specialized variants.
+### Testing
+```bash
+# Test core utilities
+python3 -c "from mirador_core.error_handling import ChainExecutor; print('OK')"
+
+# Test action generation
+python3 test_mirador_actionable.py
+
+# Test fact validation
+python3 test_fact_validation.py
+
+# Test prioritization
+python3 test_action_prioritizer.py
+```
+
+---
+
+## Pattern Learning Integration
+
+After using daily actions:
+```bash
+# Record outcomes
+python3 mirador_actionable.py complete 2025-11-21 --outcome "Result" --time 45 --value "High"
+
+# Patterns stored in: ~/ai_framework_git/mirador_actions.db
+```
+
+---
+
+## Development
+
+### Creating New Agents
+```bash
+cd modelfiles
+cat > new_agent.modelfile << 'EOF'
+FROM llama3.2:latest
+PARAMETER temperature 0.7
+SYSTEM """Your system prompt here"""
+EOF
+
+ollama create new_agent -f new_agent.modelfile
+```
+
+### Health Monitoring
+```bash
+# Weekly check
+./scripts/model_health_check.sh
+
+# Results in: health_check_log.txt
+```
+
+---
+
+## Critical Notes
+
+- **No corporate context** (Humana references removed)
+- **Focus**: Value creation (apply/fix/scale/deploy/sell/automate)
+- **mirador-core 2.1.2**: Pre-built utilities (error handling, validation)
+- **Ollama required**: All models run locally
+- **Graceful degradation**: Works with 3/5 models if some unavailable
+
+---
+
+## Legacy References
+
+**Old repo**: https://github.com/guitargnarr/mirador (DEPRECATED, Grade F)
+**This repo**: Clean phoenix, value-focused, production-ready
+
+**Philosophy**: @~/.claude/context/working-philosophy.md
