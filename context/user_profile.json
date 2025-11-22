@@ -32,6 +32,8 @@
     ],
     "platforms": [
       "guitar.projectlavos.com",
+      "projectlavos.com",
+      "jaspermatters.com",
       "ai_framework_git",
       "pattern_learning_system"
     ],
@@ -63,21 +65,105 @@
   "last_updated": "2025-11-22",
   "operational_assets": [
     {
+      "name": "guitar-platform",
+      "platform": "vercel",
+      "status": "active",
+      "quality_grade": "A",
+      "url": "https://guitar-ebon.vercel.app",
+      "custom_domain": "guitar.projectlavos.com",
+      "last_deployed": "2025-11-21",
+      "capabilities": ["guitar_learning", "chord_progressions", "practice_tools"],
+      "local_repo": "~/Projects/projectlavos-monorepo/services/guitar"
+    },
+    {
+      "name": "projectlavos-main",
+      "platform": "vercel",
+      "status": "active",
+      "quality_grade": "A",
+      "url": "https://projectlavos.com",
+      "last_deployed": "2025-11-21",
+      "capabilities": ["landing_page", "service_directory"],
+      "local_repo": "~/Projects/projectlavos-monorepo/main-site"
+    },
+    {
+      "name": "projectlavos-services",
+      "platform": "vercel",
+      "status": "active",
+      "url": "https://services-teal.vercel.app",
+      "last_deployed": "2025-11-21",
+      "capabilities": ["service_catalog"],
+      "local_repo": "~/Projects/projectlavos-monorepo/services"
+    },
+    {
+      "name": "projectlavos-backend",
+      "platform": "render",
+      "status": "active",
+      "url": "https://projectlavos-backend.onrender.com",
+      "capabilities": ["api_backend", "database"],
+      "local_repo": "~/Projects/projectlavos-backend",
+      "notes": "Referenced in production frontend code"
+    },
+    {
+      "name": "jaspermatters-portfolio",
+      "platform": "netlify",
+      "status": "active",
+      "quality_grade": "A",
+      "url": "https://jaspermatters.com",
+      "capabilities": ["portfolio", "professional_site"],
+      "local_repo": "~/Projects/Web-Development/portfolio-website"
+    },
+    {
       "name": "security-phishing-detector",
-      "status": "operational_simple_mode",
+      "platform": "railway",
+      "status": "operational",
       "quality_grade": "A-",
-      "api_url": "http://localhost:8000",
-      "location": "~/Projects/Security-Tools/security-phishing-detector",
+      "url": "https://phishguard-api-production-88df.up.railway.app",
+      "last_deployed": "2025-11-22",
       "capabilities": [
         "phishing_detection",
         "email_classification",
-        "fastapi_server"
+        "fastapi_server",
+        "ml_api"
       ],
-      "notes": "32/38 tests passing, ensemble missing but graceful degradation working"
+      "local_repo": "~/Projects/Security-Tools/security-phishing-detector",
+      "notes": "32/38 tests passing, simple model operational (86% phishing confidence), ensemble missing but graceful degradation"
+    },
+    {
+      "name": "interactive-resume",
+      "platform": "vercel",
+      "status": "active",
+      "url": "https://interactive-resume-ten-pi.vercel.app",
+      "last_deployed": "2025-11-11",
+      "capabilities": ["resume", "portfolio"],
+      "local_repo": "~/Projects/interactive-resume"
+    },
+    {
+      "name": "jobtrack",
+      "platform": "vercel",
+      "status": "active",
+      "url": "https://jobtrack-two.vercel.app",
+      "last_deployed": "2025-11-07",
+      "capabilities": ["job_tracking", "application_management"],
+      "local_repo": "~/Projects/jobtrack"
+    },
+    {
+      "name": "projectlavos-demos",
+      "platform": "vercel",
+      "status": "active",
+      "url": "https://demos.projectlavos.com",
+      "last_deployed": "2025-11-07",
+      "capabilities": ["demo_showcase"],
+      "local_repo": "~/Projects/projectlavos-monorepo/demos"
     }
   ],
   "metrics": {
     "repos_vetted": 2,
-    "operational_platforms": 1
+    "operational_platforms": 9,
+    "vercel_projects": 20,
+    "netlify_sites": 1,
+    "render_services": 1,
+    "railway_services": 1,
+    "total_monthly_cost": 0,
+    "deployment_platforms_used": ["vercel", "netlify", "render", "railway"]
   }
 }
