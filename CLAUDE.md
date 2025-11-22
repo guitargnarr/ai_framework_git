@@ -217,14 +217,14 @@ python3 mirador_actionable.py generate
 
 ---
 
-## Critical Notes
+## Critical Rules (Learned Nov 21, 2025)
 
-- **Tabula Rasa architecture**: Models are blank slates, context injected at runtime
-- **No baked-in personal data**: Update `context/user_profile.json`, not modelfiles
-- **Focus**: Value creation (apply/fix/scale/deploy/sell/automate)
-- **mirador-core 2.1.2**: Pre-built utilities (error handling, validation)
-- **Ollama required**: All models run locally
-- **Graceful degradation**: Works with 3/5 models if some unavailable
+- **Tabula Rasa Law**: NEVER bake personal context into modelfiles. Update `context/user_profile.json`, not system prompts.
+- **Model Drift Prevention**: Golden era = comprehensive prompts (1,500-2,000 bytes). Resist "optimization" that strips expertise.
+- **Iterative > Autonomous**: For high-value repos, use command-by-command (45 min, 87% quality) over batch specs (85 min, 78% quality).
+- **Context Injection**: All scripts must use `load_context()` pattern. Context = runtime payload, not compile-time baking.
+- **Pattern Learning**: Record ALL runs (even exploratory). Data compounds into optimization.
+- **Graceful Degradation**: 3/5 models succeeding = acceptable. Don't fail hard on missing components.
 
 ---
 
