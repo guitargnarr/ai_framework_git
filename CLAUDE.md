@@ -276,3 +276,20 @@ python3 mirador_actionable.py generate
 **This repo**: Clean phoenix, Tabula Rasa architecture, production-ready
 
 **Philosophy**: @~/.claude/context/working-philosophy.md
+
+---
+## 🚨 LATEST GOVERNANCE UPDATE (Nov 23, 2025)
+**Overrides previous conflicting instructions.**
+
+### 1. Tabula Rasa Law (Context Integrity)
+- **CRITICAL**: NEVER bake personal context (mortgages, health, specific location) into prompts or models.
+- If an AI tool generates personal life advice, **DISCARD IMMEDIATELY**. It is a hallucination/context leak.
+- **Strict Scope**: Actions must map to Operational Assets (Repos, Deployments, Revenue).
+
+### 2. Work Mode Update: CAPITALIZATION PHASE
+- **Current Phase**: `DEPLOY` -> **`SELL`**
+- We are no longer just building tools. We are capitalizing on them.
+- **Required Next Actions**:
+  1. **Monetize PhishGuard**: Build the user-facing UI (using Elite Frontend).
+  2. **Package Tools**: Document `inventory_oracle` and `elite-frontend` for public release.
+  3. **Inventory Valuation**: Assess remaining repos for value (not just deployability).
