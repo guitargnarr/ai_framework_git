@@ -171,6 +171,106 @@ def collect_deployment_signals(repo_path: Path) -> dict:
     return signals
 
 
+def calculate_score_deterministic(signals: dict) -> dict:
+    """
+    Calculate deployment readiness score using deterministic Python logic
+    (Small models can't do arithmetic - we do it for them)
+
+    Args:
+        signals: Deployment signals from collect_deployment_signals()
+
+    Returns:
+        dict: Score, grade, and breakdown
+    """
+    breakdown = {
+        'infrastructure': 0,
+        'quality': 0,
+        'documentation': 0,
+        'deployability': 0
+    }
+
+    # Infrastructure (40 points max)
+    if 'Dockerfile' in signals:
+        breakdown['infrastructure'] += 20
+    if any(k in signals for k in ['railway.json', 'render.yaml', 'vercel.json', 'netlify.toml']):
+        breakdown['infrastructure'] += 10
+    if any(k in signals for k in ['docker-compose.yml', '.dockerignore']):
+        breakdown['infrastructure'] += 5
+    # Assume basic env handling if has requirements/package.json
+    if 'requirements.txt' in signals or 'package.json' in signals:
+        breakdown['infrastructure'] += 5
+
+    # Quality (30 points max)
+    if signals.get('has_tests'):
+        breakdown['quality'] += 10
+    if signals.get('has_ci'):
+        breakdown['quality'] += 10
+    if signals.get('git_clean'):
+        breakdown['quality'] += 5
+    # Check for linting configs
+    lint_files = ['.eslintrc', '.eslintrc.json', '.flake8', 'pylintrc', '.prettierrc', 'pytest.ini']
+    if any(f in signals.get('root_files', []) for f in lint_files):
+        breakdown['quality'] += 5
+
+    # Documentation (20 points max)
+    if signals.get('has_readme'):
+        breakdown['documentation'] += 10
+    if signals.get('has_license'):
+        breakdown['documentation'] += 5
+    if 'requirements.txt' in signals or signals.get('scripts'):
+        breakdown['documentation'] += 5
+
+    # Deployability (10 points max)
+    if signals.get('has_remote'):
+        breakdown['deployability'] += 5
+    if signals.get('scripts') or 'requirements.txt' in signals:
+        breakdown['deployability'] += 5
+
+    # Calculate total
+    score = sum(breakdown.values())
+
+    # Determine grade
+    if score >= 90:
+        grade = "A"
+    elif score >= 80:
+        grade = "B+"
+    elif score >= 70:
+        grade = "B"
+    elif score >= 60:
+        grade = "C"
+    else:
+        grade = "F"
+
+    # Check for critical blockers
+    has_critical_blockers = False
+    missing_critical = []
+
+    if 'Dockerfile' not in signals and not any(k in signals for k in ['railway.json', 'render.yaml', 'vercel.json', 'netlify.toml']):
+        has_critical_blockers = True
+        missing_critical.append("No Dockerfile OR platform config (cannot deploy)")
+
+    if 'requirements.txt' not in signals and 'package.json' not in signals:
+        has_critical_blockers = True
+        missing_critical.append("No dependencies file")
+
+    if not signals.get('has_remote'):
+        has_critical_blockers = True
+        missing_critical.append("No git remote (cannot auto-deploy)")
+
+    # Override grade if critical blockers
+    if has_critical_blockers:
+        grade = "F"
+        score = min(score, 50)  # Cap at 50 if critical blockers
+
+    return {
+        'score': score,
+        'grade': grade,
+        'breakdown': breakdown,
+        'has_critical_blockers': has_critical_blockers,
+        'missing_critical': missing_critical
+    }
+
+
 def assess_readiness(repo_name: str) -> dict:
     """
     Assess deployment readiness of repository
@@ -188,29 +288,67 @@ def assess_readiness(repo_name: str) -> dict:
         # Collect signals
         signals = collect_deployment_signals(repo_path)
 
-        # Build analysis prompt
-        prompt = f"""Analyze deployment readiness for repository.
+        # Calculate score deterministically (Python does the math)
+        scoring = calculate_score_deterministic(signals)
 
-DEPLOYMENT SIGNALS:
-{json.dumps(signals, indent=2)}
+        # Determine recommended platform (rule-based)
+        if 'Dockerfile' in signals and 'requirements.txt' in signals:
+            platform = 'railway'
+        elif signals.get('scripts') and 'package.json' in signals:
+            if 'next' in str(signals.get('scripts', {})).lower() or 'react' in str(signals.get('scripts', {})).lower():
+                platform = 'vercel'
+            else:
+                platform = 'railway'
+        elif signals.get('has_readme') and not any(k in signals for k in ['Dockerfile', 'package.json', 'requirements.txt']):
+            platform = 'netlify'
+        else:
+            platform = 'railway'
 
-Return readiness scorecard in strict JSON format."""
+        # Determine deployment readiness
+        deployment_ready = scoring['score'] >= 70 and not scoring['has_critical_blockers']
 
-        # Query readiness analyzer
-        response = ollama.generate(
-            model='deployment_readiness_analyzer',
-            prompt=prompt,
-            options={'temperature': 0.0, 'num_predict': 800}
-        )
+        # Estimate deploy time
+        if scoring['score'] >= 90:
+            est_time = 10
+        elif scoring['score'] >= 80:
+            est_time = 15
+        elif scoring['score'] >= 70:
+            est_time = 30
+        else:
+            est_time = 60
 
-        # Parse response (extract JSON, ignore prose)
-        output = extract_json(response['response'])
-        scorecard = json.loads(output)
+        # Build missing_recommended list
+        missing_recommended = []
+        if not signals.get('has_tests'):
+            missing_recommended.append('tests')
+        if not signals.get('has_ci'):
+            missing_recommended.append('ci_cd')
+        if not signals.get('has_license'):
+            missing_recommended.append('LICENSE')
+        if not signals.get('git_clean'):
+            missing_recommended.append('commit_changes')
 
-        # Add metadata
-        scorecard['repo_analyzed'] = repo_name
-        scorecard['repo_path'] = str(repo_path)
-        scorecard['analyzed_at'] = datetime.now().isoformat()
+        # Generate next action
+        if scoring['has_critical_blockers']:
+            next_action = f"Fix critical: {', '.join(scoring['missing_critical'])}"
+        elif deployment_ready:
+            next_action = f"Deploy to {platform}" + (f" (add {missing_recommended[0]} first)" if missing_recommended else "")
+        else:
+            next_action = f"Add {', '.join(missing_recommended[:2])}, then deploy"
+
+        # Build scorecard
+        scorecard = {
+            **scoring,  # score, grade, breakdown, has_critical_blockers, missing_critical
+            'missing_recommended': missing_recommended,
+            'deployment_ready': deployment_ready,
+            'recommended_platform': platform,
+            'estimated_deploy_time_minutes': est_time,
+            'next_action': next_action,
+            'repo_analyzed': repo_name,
+            'repo_path': str(repo_path),
+            'analyzed_at': datetime.now().isoformat(),
+            'scoring_method': 'hybrid_deterministic_v1'
+        }
 
         return scorecard
 
