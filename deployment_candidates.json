@@ -1,0 +1,402 @@
+[
+  {
+    "name": "email-notifications",
+    "path": "/Users/matthewscott/Projects/.worktrees/projectlavos-backend/feature/email-notifications",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "phishguard-features",
+    "path": "/Users/matthewscott/Projects/.worktrees/projectlavos-backend/feature/phishguard-features",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "AI-Framework-Unified",
+    "path": "/Users/matthewscott/Projects/AI-ML/AI-Framework-Unified",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "ai-orchestrator",
+    "path": "/Users/matthewscott/Projects/AI-ML/ai-orchestrator",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "consciousness-experiments",
+    "path": "/Users/matthewscott/Projects/AI-ML/consciousness-experiments",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "knowledge-base",
+    "path": "/Users/matthewscott/Projects/AI-ML/knowledge-base",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "llm-engineer-demo",
+    "path": "/Users/matthewscott/Projects/AI-ML/llm-engineer-demo",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "ollama-experiments",
+    "path": "/Users/matthewscott/Projects/AI-ML/ollama-experiments",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "sentiment-analysis-api",
+    "path": "/Users/matthewscott/Projects/AI-ML/sentiment-analysis-api",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "career-automation",
+    "path": "/Users/matthewscott/Projects/Career-Business/career-automation",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "career-job-tools",
+    "path": "/Users/matthewscott/Projects/Career-Business/career-job-tools",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "jaspermatters-job-intelligence",
+    "path": "/Users/matthewscott/Projects/Career-Business/jaspermatters-job-intelligence",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "music-fretforge",
+    "path": "/Users/matthewscott/Projects/Music-Audio/music-fretforge",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "music-fretvision-app",
+    "path": "/Users/matthewscott/Projects/Music-Audio/music-fretvision-app",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "music-fretvision-github",
+    "path": "/Users/matthewscott/Projects/Music-Audio/music-fretvision-github",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "music-guitar-tools",
+    "path": "/Users/matthewscott/Projects/Music-Audio/music-guitar-tools",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "personal-vision-board",
+    "path": "/Users/matthewscott/Projects/Personal/Katie/personal-vision-board",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "jcps-boots",
+    "path": "/Users/matthewscott/Projects/Personal/jcps-boots",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "personal-journey",
+    "path": "/Users/matthewscott/Projects/Personal/personal-journey",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "personal-journey-flow",
+    "path": "/Users/matthewscott/Projects/Personal/personal-journey-flow",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "apartment-leasing-demo",
+    "path": "/Users/matthewscott/Projects/Portfolio/apartment-leasing-demo",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "security-phishing-detector",
+    "path": "/Users/matthewscott/Projects/Security-Tools/security-phishing-detector",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "security-phishing-detector.backup",
+    "path": "/Users/matthewscott/Projects/Security-Tools/security-phishing-detector.backup",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "portfolio-goldmine-revealed",
+    "path": "/Users/matthewscott/Projects/Web-Development/portfolio-goldmine-revealed",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "portfolio-website",
+    "path": "/Users/matthewscott/Projects/Web-Development/portfolio-website",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "web-ziggy-dashboard",
+    "path": "/Users/matthewscott/Projects/Web-Development/web-ziggy-dashboard",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "fretforge-v1",
+    "path": "/Users/matthewscott/Projects/fretforge-v1",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "guitargnarr",
+    "path": "/Users/matthewscott/Projects/guitargnarr",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "ideapond",
+    "path": "/Users/matthewscott/Projects/ideapond",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "interactive-resume",
+    "path": "/Users/matthewscott/Projects/interactive-resume",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "job-search-automation",
+    "path": "/Users/matthewscott/Projects/job-search-automation",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "jobtrack",
+    "path": "/Users/matthewscott/Projects/jobtrack",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "mcp-vercel",
+    "path": "/Users/matthewscott/Projects/mcp-vercel",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "projectlavos-backend",
+    "path": "/Users/matthewscott/Projects/projectlavos-backend",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "projectlavos-frontend",
+    "path": "/Users/matthewscott/Projects/projectlavos-frontend",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "projectlavos-monorepo",
+    "path": "/Users/matthewscott/Projects/projectlavos-monorepo",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "prompt-engineering-showcase",
+    "path": "/Users/matthewscott/Projects/prompt-engineering-showcase",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "reflexia-model-manager",
+    "path": "/Users/matthewscott/Projects/reflexia-model-manager",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "reflexia-model-manager-restored",
+    "path": "/Users/matthewscott/Projects/reflexia-model-manager-restored",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  },
+  {
+    "name": "tool-gmail-integration",
+    "path": "/Users/matthewscott/Projects/tool-gmail-integration",
+    "score": 85,
+    "grade": "B+",
+    "deployment_ready": true,
+    "platform": "railway",
+    "time": 15,
+    "action": "Add tests, deploy to Railway"
+  }
+]
