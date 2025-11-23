@@ -122,6 +122,35 @@ python3 mirador.py chain "prompt" model1 model2
 python3 mirador_action_prioritizer.py add --title "Task" --financial-impact 8 --time-efficiency 7
 ```
 
+### Deployment Tools (Nov 22, 2025)
+
+**Readiness Assessment** (Hybrid: Python scoring + rule-based logic):
+```bash
+# Assess any repo for deployment readiness
+python3 inventory_oracle.py readiness REPO_NAME
+
+# Returns: score (0-100), grade (A-F), platform, deploy time estimate
+# Example: python3 inventory_oracle.py readiness reflexia
+# Output: {"score": 85, "grade": "B+", "platform": "railway", "time": 15}
+
+# Scoring is deterministic (Python math, not AI):
+# - Infrastructure: Dockerfile(20), platform config(10), etc.
+# - Quality: tests(10), CI/CD(10), git clean(5)
+# - Documentation: README(10), LICENSE(5)
+# - Deployability: git remote(5), build scripts(5)
+```
+
+**Code Generation** (B+ quality, needs human QA):
+```bash
+# Generate Next.js 14 + TypeScript + Shadcn components
+ollama run elite-frontend "Create a responsive navbar"
+
+# Quality: B+ (85% time savings, 2 min human fixes needed)
+# Fixes needed: Import corrections (Icon → specific lucide icons)
+# Use for: Component scaffolding, not production-final code
+# Stack: Next.js 14 App Router, TypeScript strict, Tailwind, Shadcn/UI
+```
+
 ### Testing
 ```bash
 # Test core utilities
@@ -217,14 +246,27 @@ python3 mirador_actionable.py generate
 
 ---
 
-## Critical Rules (Learned Nov 21, 2025)
+## Critical Rules
 
-- **Tabula Rasa Law**: NEVER bake personal context into modelfiles. Update `context/user_profile.json`, not system prompts.
-- **Model Drift Prevention**: Golden era = comprehensive prompts (1,500-2,000 bytes). Resist "optimization" that strips expertise.
-- **Iterative > Autonomous**: For high-value repos, use command-by-command (45 min, 87% quality) over batch specs (85 min, 78% quality).
-- **Context Injection**: All scripts must use `load_context()` pattern. Context = runtime payload, not compile-time baking.
-- **Pattern Learning**: Record ALL runs (even exploratory). Data compounds into optimization.
-- **Graceful Degradation**: 3/5 models succeeding = acceptable. Don't fail hard on missing components.
+**Tabula Rasa Law**: NEVER bake personal context into modelfiles. Update `context/user_profile.json`, not system prompts.
+
+**Quality Before Deployment**:
+- Test repos before deploying (check what they do, who needs them)
+- Don't ship blindly because Oracle says "B+" - understand the value first
+- Deployment Oracle scores deployability, not usefulness
+- You decide what's valuable, Oracle decides what's deployable
+
+**AI + Python Hybrid Pattern** (Nov 22, 2025):
+- Use AI for: qualitative tasks (code generation, recommendations)
+- Use Python for: quantitative tasks (scoring, math, logic)
+- Don't use AI for static inventory (CLI tools + JSON is simpler)
+- Small models can't do arithmetic reliably (hybrid scoring proven)
+
+**Deployment Pattern**:
+- Railway: Dockerfile + Python/FastAPI (PORT from env, health endpoint)
+- Vercel: Next.js/React (package.json with build script)
+- Netlify: Static sites (HTML/markdown)
+- Template: `~/.claude/templates/deploy-railway.md`
 
 ---
 
