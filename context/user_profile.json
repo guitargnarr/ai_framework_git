@@ -62,7 +62,7 @@
     ]
   },
   "context_version": "1.0",
-  "last_updated": "2025-11-22",
+  "last_updated": "2025-11-23",
   "operational_assets": [
     {
       "name": "guitar-platform",
@@ -72,7 +72,11 @@
       "url": "https://guitar-ebon.vercel.app",
       "custom_domain": "guitar.projectlavos.com",
       "last_deployed": "2025-11-21",
-      "capabilities": ["guitar_learning", "chord_progressions", "practice_tools"],
+      "capabilities": [
+        "guitar_learning",
+        "chord_progressions",
+        "practice_tools"
+      ],
       "local_repo": "~/Projects/projectlavos-monorepo/services/guitar"
     },
     {
@@ -82,7 +86,10 @@
       "quality_grade": "A",
       "url": "https://projectlavos.com",
       "last_deployed": "2025-11-21",
-      "capabilities": ["landing_page", "service_directory"],
+      "capabilities": [
+        "landing_page",
+        "service_directory"
+      ],
       "local_repo": "~/Projects/projectlavos-monorepo/main-site"
     },
     {
@@ -91,7 +98,9 @@
       "status": "active",
       "url": "https://services-teal.vercel.app",
       "last_deployed": "2025-11-21",
-      "capabilities": ["service_catalog"],
+      "capabilities": [
+        "service_catalog"
+      ],
       "local_repo": "~/Projects/projectlavos-monorepo/services"
     },
     {
@@ -99,7 +108,10 @@
       "platform": "render",
       "status": "active",
       "url": "https://projectlavos-backend.onrender.com",
-      "capabilities": ["api_backend", "database"],
+      "capabilities": [
+        "api_backend",
+        "database"
+      ],
       "local_repo": "~/Projects/projectlavos-backend",
       "notes": "Referenced in production frontend code"
     },
@@ -109,7 +121,10 @@
       "status": "active",
       "quality_grade": "A",
       "url": "https://jaspermatters.com",
-      "capabilities": ["portfolio", "professional_site"],
+      "capabilities": [
+        "portfolio",
+        "professional_site"
+      ],
       "local_repo": "~/Projects/Web-Development/portfolio-website"
     },
     {
@@ -134,7 +149,10 @@
       "status": "active",
       "url": "https://interactive-resume-ten-pi.vercel.app",
       "last_deployed": "2025-11-11",
-      "capabilities": ["resume", "portfolio"],
+      "capabilities": [
+        "resume",
+        "portfolio"
+      ],
       "local_repo": "~/Projects/interactive-resume"
     },
     {
@@ -143,7 +161,10 @@
       "status": "active",
       "url": "https://jobtrack-two.vercel.app",
       "last_deployed": "2025-11-07",
-      "capabilities": ["job_tracking", "application_management"],
+      "capabilities": [
+        "job_tracking",
+        "application_management"
+      ],
       "local_repo": "~/Projects/jobtrack"
     },
     {
@@ -152,18 +173,42 @@
       "status": "active",
       "url": "https://demos.projectlavos.com",
       "last_deployed": "2025-11-07",
-      "capabilities": ["demo_showcase"],
+      "capabilities": [
+        "demo_showcase"
+      ],
       "local_repo": "~/Projects/projectlavos-monorepo/demos"
+    },
+    {
+      "name": "phishguard-ui",
+      "platform": "vercel",
+      "status": "active",
+      "quality_grade": "A",
+      "url": "https://phishguard-6h2cu84x3-matthew-scotts-projects-1dc9743e.vercel.app",
+      "github": "https://github.com/guitargnarr/phishguard-ui",
+      "last_deployed": "2025-11-23",
+      "capabilities": [
+        "phishing_demo",
+        "email_security_ui",
+        "ml_api_frontend"
+      ],
+      "local_repo": "~/Projects/phishguard-ui",
+      "notes": "User-facing UI for PhishGuard API. Generated with elite-frontend, 15 min build time. CI/CD enabled."
     }
   ],
   "metrics": {
     "repos_vetted": 2,
-    "operational_platforms": 9,
-    "vercel_projects": 20,
+    "operational_platforms": 10,
+    "vercel_projects": 21,
     "netlify_sites": 1,
     "render_services": 1,
     "railway_services": 1,
     "total_monthly_cost": 0,
-    "deployment_platforms_used": ["vercel", "netlify", "render", "railway"]
+    "deployment_platforms_used": [
+      "vercel",
+      "netlify",
+      "render",
+      "railway"
+    ],
+    "full_stack_products": 1
   }
 }
