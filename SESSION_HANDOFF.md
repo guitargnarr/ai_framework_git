@@ -74,3 +74,54 @@ ls -la | head -15
 ---
 
 **Next: Use tools to deploy (don't build more tools). Gemini's right.**
+
+---
+
+## ⚠️ What We Missed (Blind Spots to Address)
+
+1. **Daily Action Ignored** ❌
+   - Generated mortgage refinancing action (potential $18-36K value)
+   - Never executed it (chose tool-building instead)
+   - Merry Go Round Protocol says: generate → execute → refine
+   - We skipped execute
+
+2. **PhishGuard Has No User-Facing UI** ⚠️
+   - API works, Swagger docs exist
+   - Missing: Landing page, demo UI, way for non-technical users to try it
+   - Still not "sellable to public" (Gemini's original point)
+   - Need: Simple form to paste email, get phishing verdict
+
+3. **Frontend Engineer Untested In Production** ⚠️
+   - Generated 2 test components (pricing cards)
+   - Never integrated into actual Next.js project
+   - Don't know if it works beyond hello-world examples
+   - Claim "85% time savings" is unproven in real use
+
+4. **40 Repos Assessed, Only 1 Investigated** ❌
+   - Oracle scored 40 repos (all B+, then we fixed scoring)
+   - Only investigated reflexia's value (decided not to deploy)
+   - 39 other repos: unknown what they do, unknown if valuable
+   - Have deployment candidates list but no value assessment
+
+5. **Pattern Learning Not Fed Consistently** ⚠️
+   - Recorded: phishguard vetting (Run #7)
+   - Didn't record: Railway deployment, Oracle dev, Frontend Engineer build, doc purge
+   - Pattern learning exists but we're not using it systematically
+
+6. **Sell Stage Still At Zero** ❌
+   - work_mode: apply→fix→scale→deploy→**SELL**→automate
+   - Progress: apply ✅, fix ✅, scale ✅, deploy ✅
+   - Missing: **sell** (no revenue, no customers, no pricing)
+   - We built sellable tools but haven't sold them
+
+7. **20 Vercel Projects Unknown** ❌
+   - Agent found 20 Vercel projects
+   - Know 4-5 (guitar, projectlavos, jaspermatters)
+   - Other 15: unknown what they are, if live, if valuable
+   - Potential waste/cost/clutter
+
+**Biggest miss**: We proved the factory works but haven't run the production line toward revenue.
+
+**Tomorrow**: Execute daily action, OR package Oracle/Frontend to sell, OR add PhishGuard UI for users.
+
+**Not tomorrow**: Build more tools, deploy without value verification, perfect existing tools.
