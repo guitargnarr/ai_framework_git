@@ -139,3 +139,40 @@
 ---
 
 **This map guides all future decisions: Focus on Tier 1-2, archive Tier 4.**
+
+---
+
+## 📝 Additional Findings (Nov 23 Investigation)
+
+### OurJourney/personal-journey Variants (3 versions)
+
+**personal-journey-flow** (Active, Personal Use):
+- **Path**: ~/Projects/Personal/personal-journey-flow
+- **Platform**: Vercel (linked, not deployed publicly yet)
+- **Purpose**: Couples wellness tracker (relationship rituals, custody scheduling, memory archive)
+- **Tech**: React + TypeScript + Airflow automation (6 DAGs)
+- **Value**: Personal/family tool, NOT commercial product candidate
+- **Tier**: 3 (deployed for personal use, low revenue potential)
+- **Decision**: Keep for personal use, don't focus revenue efforts here
+
+**OurJourney (Archived)**:
+- **Path**: ~/Projects/Archive-Recovered-2025-11-18/OurJourney (243MB)
+- **Status**: Historical version, superseded by personal-journey-flow
+- **Decision**: Keep archived, don't deploy
+
+**personal-journey (Portfolio)**:
+- **Path**: ~/Projects/Personal/personal-journey
+- **Status**: Static portfolio version (4.3MB, unclear purpose)
+- **Decision**: Archive or delete (duplicate/outdated)
+
+**MCP Investigation**: NO Model Context Protocol usage found in any OurJourney version.
+
+---
+
+## Strategy Application: Focus on Commercial Products
+
+**Personal tools** (OurJourney, vision-board, etc.): Keep for personal use, don't commercialize
+**Commercial products** (PhishGuard, jaspermatters, FretForge): Focus revenue efforts here
+**Consulting demos** (llm-engineer-demo, prompt-showcase): Deploy to generate leads
+
+**This investigation clarifies**: Not every deployed project needs to generate revenue. Personal tools serve different purpose.
