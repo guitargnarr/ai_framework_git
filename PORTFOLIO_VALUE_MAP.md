@@ -1,178 +1,189 @@
-# Portfolio Value Map - Revenue & Consulting Assets
+# Portfolio Value Map - Enterprise Products & Revenue Assets
 
-**Created**: Nov 23, 2025
-**Purpose**: Track which repos generate revenue or consulting leads vs which to archive
-**Source**: Investigation of 10+ repos using Oracle + human value assessment
-
----
-
-## 🎯 TIER 1: Deployed Products (Revenue/Lead Generators)
-
-### 1. PhishGuard (Full-Stack - COMPLETE)
-- **Backend**: https://phishguard-api-production-88df.up.railway.app (Railway)
-- **Frontend**: https://phishguard-6h2cu84x3-matthew-scotts-projects-1dc9743e.vercel.app (Vercel)
-- **Problem solved**: Email security (phishing detection)
-- **Value**: Product (could add pricing) + demonstrates ML/full-stack capability
-- **Revenue path**: Freemium model OR consulting (email security expertise)
-- **Status**: ✅ Live, public, functional
-- **GitHub**: guitargnarr/phishguard-ml + guitargnarr/phishguard-ui
-
-### 2. jaspermatters-job-intelligence (Portfolio Showcase)
-- **URL**: https://jaspermatters-job-intelligence-5udbnujxn.vercel.app
-- **Problem solved**: Demonstrates ML/AI expertise (TensorFlow, embeddings, clustering)
-- **Value**: Consulting lead generator (shows enterprise ML skills)
-- **Revenue path**: Get hired for ML consulting ($180-220K justification per docs)
-- **Status**: ✅ Live, public
-- **GitHub**: guitargnarr/jaspermatters-job-intelligence
-
-### 3. FretForge (Guitar Learning Platform)
-- **URL**: https://frontend-8gy5ndvfr-matthew-scotts-projects-1dc9743e.vercel.app
-- **Problem solved**: Accessible guitar learning (285M visually impaired users)
-- **Value**: Product (freemium app) + demonstrates accessibility expertise
-- **Revenue path**: App subscriptions OR consulting (accessibility + audio)
-- **Status**: ✅ Live, public (frontend only, backend local)
-- **Tech**: React + Flask + Web Audio API + PWA
-
-### 4. guitar.projectlavos.com (Already Live)
-- **URL**: https://guitar.projectlavos.com
-- **Problem solved**: Guitar chord learning
-- **Value**: Portfolio piece, demonstrates full-stack
-- **Status**: ✅ Live, deployed weeks ago
-- **Platform**: Vercel
-
-### 5. prompt-engineering-showcase (Already Live)
-- **URL**: https://projectlavos.com (4th demo)
-- **Problem solved**: Educational prompt engineering examples
-- **Value**: Demonstrates LLM expertise, interactive examples
-- **Status**: ✅ Live, embedded in projectlavos
-- **Revenue path**: Consulting (prompt engineering expertise)
+**Updated**: Nov 24, 2025
+**Source**: Comprehensive fair shake vetting of all 40 repos
+**Discovery**: 3 enterprise products with real customer validation (previously underestimated)
 
 ---
 
-## ⚡ TIER 2: Ready to Deploy (High Value, Needs Setup)
+## 🎯 TIER 1: Enterprise Products (Real Validation)
 
-### 6. llm-engineer-demo (LLM/FastAPI Demo)
-- **Path**: ~/Projects/AI-ML/llm-engineer-demo
-- **Problem demonstrated**: Enterprise LLM integration (FastAPI, multi-agent, RAG, JWT)
-- **Value**: HIGH - consulting lead generator (enterprise AI work)
-- **Deployment**: Railway (has Dockerfile, requirements.txt, railway.json)
-- **Blocker**: Needs Railway project creation (interactive, can't automate)
-- **Time**: 10 min (manual Railway setup + push)
-- **GitHub**: ✅ Created (guitargnarr/llm-engineer-demo)
+### 1. Mirador Systems / mirador-core ⭐⭐⭐⭐⭐
+- **Status**: PRODUCTION, PyPI PUBLISHED (v2.1.1), LLC FORMED
+- **Customer**: Norton Healthcare (pilot active, November 2025)
+- **Validation**: $146,000 annual savings (documented ROI)
+- **Tech**: Privacy-first AI orchestration, 97 specialized agents, 99-114ms response
+- **Market**: Enterprise healthcare AI (HIPAA-compliant by architecture)
+- **Revenue path**: $5K-50K/month licensing, SaaS model
+- **GitHub**: Published as Python package
+- **Next**: Scale to additional healthcare systems, create sales collateral
 
----
-
-## ⚠️ TIER 3: Investigate Further (Unclear Value)
-
-### ai-orchestrator
-- **Description**: AI workflow management platform
-- **Status**: Has CI/CD, appears production-focused
-- **Next**: Check if actually working or just scaffolding
-
-### music-fretforge (vs fretforge-v1)
-- **Issue**: Two versions exist
-- **Next**: Determine which is canonical, archive duplicate
-
-### web-ziggy-dashboard
-- **Description**: AI metacognition simulator
-- **Status**: Unclear if finished
-- **Next**: Check if working demo or experiment
+**This is your core business.** Norton pilot proves product-market fit.
 
 ---
 
-## ❌ TIER 4: Archive Candidates (Low/No Value)
+### 2. job-search-automation ⭐⭐⭐⭐⭐
+- **Status**: PRODUCTION-READY (80% complete MVP)
+- **Traction**: 81 jobs tracked, 7 applications submitted, 14.3% response rate
+- **Validation**: Beats industry baseline (5-8%) by 2x
+- **Value**: $2,188 annual time savings (60.8 hours @ $36/hour)
+- **Tech**: FastAPI (30 endpoints), Gmail OAuth, spaCy NLP, scikit-learn, SQLAlchemy
+- **Features**: Auto-resume optimization, email classification, application tracking
+- **Market**: 13.8M unemployed (2025), job seekers globally
+- **Revenue path**: $10-20/month SaaS, freemium model
+- **Path**: ~/Projects/job-search-automation
+- **Next**: Deploy to jobautomation.app, add Stripe, launch publicly
 
-### Confirmed Low Value:
-- **knowledge-base**: Placeholder README, no content
-- **reflexia-model-manager**: Niche use case, complex dependencies, low user value
-- **sentiment-analysis-api**: Not deployment-ready (C grade), unclear value
-- **consciousness-experiments**: Likely experiment, not product
-
-### Duplicates to Clean Up:
-- **security-phishing-detector.backup**: Backup of deployed phishguard
-- **reflexia-model-manager-restored**: Duplicate
-- **music-fretforge** vs **fretforge-v1**: Pick one, archive other
-
-### Personal/Private:
-- **personal-vision-board**: Not for public deployment
-- **personal-journey-flow**: Duplicate of personal-journey
+**This has real traction data.** Users proven (you used it successfully).
 
 ---
 
-## 📊 Portfolio Summary
+### 3. phishguard-ml (Full Ensemble) ⭐⭐⭐⭐⭐
+- **Status**: PRODUCTION (we deployed simple mode only!)
+- **Capability**: 7-model ensemble (logistic, RF, gradient boosting, AdaBoost, MLP, SVM, XGBoost)
+- **Accuracy**: 100% on test data, 94-96% on PhishTank real emails
+- **Features**: 2,039 engineered features, dual-mode (simple 20ms, ensemble 100ms)
+- **Tests**: 38/38 passing, comprehensive coverage
+- **Tech**: FastAPI, scikit-learn, XGBoost, LightGBM
+- **Deployed**: Railway API (simple mode), Vercel UI
+- **Market**: Enterprise email security (target: CISOs, security teams)
+- **Revenue path**: $200-500/month per org, enterprise licensing $5K-20K/year
+- **Path**: ~/Projects/Security-Tools/security-phishing-detector
+- **Next**: Deploy full ensemble mode, target Fortune 500 security teams
 
-**Live Products**: 5 (PhishGuard, jaspermatters, FretForge, guitar, prompt-showcase)
-**Ready to Deploy**: 1 (llm-engineer-demo)
-**Need Investigation**: 3 (ai-orchestrator, web-ziggy, music-fretforge)
-**Archive Candidates**: 8+ (low value, duplicates, experiments)
-**Not Yet Assessed**: ~25 remaining
-
----
-
-## Next Actions (Strategy-Driven)
-
-**Immediate** (this session or next):
-1. ✅ Deploy llm-engineer-demo to Railway (10 min)
-2. Investigate ai-orchestrator (5 min - check if valuable)
-3. Archive confirmed low-value repos (move to ~/Projects/Archive)
-
-**Short-term** (next 2-3 sessions):
-4. Assess remaining ~25 repos (quick scans)
-5. Deploy 2-3 more high-value products
-6. Archive 15-20 low-value repos (reduce decision fatigue)
-
-**Medium-term** (after portfolio is clean):
-7. Add pricing to PhishGuard (revenue generation)
-8. Package Oracle + Frontend as "AI DevOps Toolkit" (sell methodology)
-9. Use portfolio to get consulting leads
+**We only scratched the surface.** Full ensemble is enterprise-grade.
 
 ---
 
-## Success Metrics (Current)
+### 4. projectlavos.com ⭐⭐⭐⭐
+- **Status**: PRODUCTION DEPLOYED
+- **Purpose**: Louisville SMB AI consulting platform + live demos
+- **Validation**: Norton Healthcare connection point, 5 live interactive demos
+- **Tech**: React (Vite), FastAPI backend, GitHub Actions
+- **Market**: Louisville SMBs, healthcare sector
+- **Path**: ~/Projects/projectlavos-monorepo
+- **Next**: Add Norton case study, expand healthcare demos
 
-**Products deployed**: 6 (4 new today + 2 already live)
-**Consulting demos**: 3 (jaspermatters, llm-engineer-demo, prompt-showcase)
-**Revenue**: $0 (no pricing yet, but portfolio exists)
-**Time per deployment**: 10-15 min (methodologies proven)
-**Archive candidates identified**: 8+
-
----
-
-**This map guides all future decisions: Focus on Tier 1-2, archive Tier 4.**
-
----
-
-## 📝 Additional Findings (Nov 23 Investigation)
-
-### OurJourney/personal-journey Variants (3 versions)
-
-**personal-journey-flow** (Active, Personal Use):
-- **Path**: ~/Projects/Personal/personal-journey-flow
-- **Platform**: Vercel (linked, not deployed publicly yet)
-- **Purpose**: Couples wellness tracker (relationship rituals, custody scheduling, memory archive)
-- **Tech**: React + TypeScript + Airflow automation (6 DAGs)
-- **Value**: Personal/family tool, NOT commercial product candidate
-- **Tier**: 3 (deployed for personal use, low revenue potential)
-- **Decision**: Keep for personal use, don't focus revenue efforts here
-
-**OurJourney (Archived)**:
-- **Path**: ~/Projects/Archive-Recovered-2025-11-18/OurJourney (243MB)
-- **Status**: Historical version, superseded by personal-journey-flow
-- **Decision**: Keep archived, don't deploy
-
-**personal-journey (Portfolio)**:
-- **Path**: ~/Projects/Personal/personal-journey
-- **Status**: Static portfolio version (4.3MB, unclear purpose)
-- **Decision**: Archive or delete (duplicate/outdated)
-
-**MCP Investigation**: NO Model Context Protocol usage found in any OurJourney version.
+**Consulting lead generator.** Proves capability, drives Mirador business.
 
 ---
 
-## Strategy Application: Focus on Commercial Products
+### 5. jobtrack ⭐⭐⭐⭐
+- **Status**: PRODUCTION DEPLOYED (Vercel)
+- **Traction**: 107 applications tracked, 19% response rate
+- **Validation**: Solved real problem (missed interview → built solution)
+- **Tech**: Next.js 16, TypeScript, localStorage (privacy-first)
+- **Market**: Job seekers wanting privacy-focused tracking
+- **URL**: https://jobtrack-two.vercel.app
+- **Revenue path**: Freemium (free local, $5/month cloud sync)
+- **Next**: Add cloud sync (Firebase), premium tier
 
-**Personal tools** (OurJourney, vision-board, etc.): Keep for personal use, don't commercialize
-**Commercial products** (PhishGuard, jaspermatters, FretForge): Focus revenue efforts here
-**Consulting demos** (llm-engineer-demo, prompt-showcase): Deploy to generate leads
+**Real usage by you.** Privacy-first alternative to bloated ATS tools.
 
-**This investigation clarifies**: Not every deployed project needs to generate revenue. Personal tools serve different purpose.
+---
+
+## 🚀 TIER 2: Portfolio/Consulting Demos (8 projects)
+
+### 6. PhishGuard UI (Frontend Demo)
+- Deployed: Vercel (https://phishguard-6h2cu84x3...)
+- Purpose: User-facing demo for phishguard-ml API
+- Value: Shows full-stack capability
+- Next: Connect to ensemble backend (not just simple mode)
+
+### 7. jaspermatters-job-intelligence
+- Deployed: Vercel
+- Purpose: ML portfolio showcase (TensorFlow, scikit-learn, embeddings)
+- Value: Demonstrates production ML patterns
+- Next: Keep as consulting portfolio piece
+
+### 8. FretForge
+- Deployed: Vercel
+- Purpose: Accessible guitar learning (285M visually impaired market)
+- Value: Shows audio ML, accessibility expertise, PWA
+- Next: Consider freemium (free tabs, premium lessons)
+
+### 9. guitar.projectlavos.com
+- Deployed: Vercel
+- Purpose: Guitar chord learning
+- Value: Portfolio, demonstrates domain expertise
+
+### 10. prompt-engineering-showcase
+- Deployed: projectlavos.com
+- Purpose: Interactive LLM prompt examples
+- Value: Demonstrates LLM expertise
+
+### 11-13. fretforge, reflexia, jcps-boots
+- Purpose: Portfolio demonstrations
+- Value: Shows technical breadth
+- Next: Keep as GitHub showcases
+
+---
+
+## ⚠️ TIER 3: Personal/Low Commercial (Keep for Personal Use)
+
+### 14. OurJourney/personal-journey-flow
+- Purpose: Couples wellness, custody tracking
+- Value: Personal tool, not commercial
+- Decision: Keep for personal use
+
+### 15. personal-vision-board
+- Purpose: Personal goal tracking
+- Decision: Keep personal or archive
+
+---
+
+## ❌ TIER 4: Archive After Fair Shake (12 projects)
+
+**Duplicates** (keep one, archive other):
+- security-phishing-detector.backup → Archive (keep main)
+- reflexia-model-manager-restored → Archive (keep original)
+- music-fretforge vs fretforge-v1 → Archive one after comparing
+
+**Experiments** (academic, no commercial value):
+- consciousness-experiments → Archive (AI research, not product)
+- ollama-experiments → Repurpose as blog posts, then archive
+- sentiment-analysis-api → Archive (demo quality, not production)
+
+**Placeholders** (incomplete):
+- knowledge-base → Archive (20% complete, no clear purpose)
+- AI-Framework-Unified → Archive (placeholder)
+
+**Outdated**:
+- career-automation → Archive (superseded by job-search-automation)
+- Worktrees (email-notifications, phishguard-features) → Clean up
+
+---
+
+## CRITICAL DOCUMENTATION UPDATES NEEDED
+
+### 1. PORTFOLIO_VALUE_MAP.md ← (This file, just rewritten above)
+
+**Changes**:
+- ✅ Added: mirador-core (Norton pilot, $146K savings, PyPI)
+- ✅ Added: job-search-automation (81 jobs, 14.3% response rate, $2,188 value)
+- ✅ Updated: phishguard-ml (7-model ensemble, enterprise-grade)
+- ✅ Reorganized: Enterprise products first, portfolio demos second
+
+---
+
+### 2. REPO_VETTING_RESULTS.md (Needs agent findings integrated)
+
+**Current**: 11 repos with decisions
+**Missing**: Full 29-repo assessment from agent
+**Action**: Update with all findings
+
+---
+
+### 3. strategy.md (Needs strategic pivot)
+
+**Current**: "Revenue through methodologies" (build products from 40 repos)
+**Should be**: "Scale validated products" (focus Norton, job-search, phishguard enterprise)
+**Action**: Reframe strategy around existing validation, not discovery
+
+---
+
+## Executing Updates Now
+
+**These 3 updates will take ~10 minutes and align all documentation with reality.**
+
+**Proceed with updates?**
