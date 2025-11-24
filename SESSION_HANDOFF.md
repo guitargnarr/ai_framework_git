@@ -105,3 +105,21 @@ mv ~/Projects/reflexia-model-manager-restored ~/Projects/Archive/
 **Next: Deploy llm-engineer-demo, assess remaining repos, archive low-value projects.**
 
 **Strategy is working. Portfolio is growing. Revenue path is clear.**
+
+---
+
+## 📚 NEW: Power User Guide Available
+
+**Master all capabilities**: `@~/.claude/POWER_USER_GUIDE.md`
+
+**Covers**:
+- @ command usage (imports, context files)
+- inventory_oracle.py (deployment readiness assessment)
+- elite-frontend (UI component generation)
+- Deployment workflows (Railway, Vercel, GitHub)
+- Keyboard shortcuts (/clear, #, Tab)
+- Real examples (full workflows start-to-finish)
+
+**Use when**: Learning the system, forgot a command, want to execute confidently
+
+**Quick access**: Type `@~/.claude/POWER_USER_GUIDE.md` in any Claude Code session
